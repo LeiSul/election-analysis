@@ -72,7 +72,7 @@ with open(file_to_load) as election_data:
             county_votes[county_name] = 0
 
         # 5: Add a vote to that county's vote count.
-        county_votes[county_name] += 1
+        county_votes[county_name] = county_votes[county_name] + 1
 
 
 # Save the results to our text file.
@@ -108,7 +108,7 @@ with open(file_to_save, "w") as txt_file:
             winning_county_percentage = county_vote_percentage
             winning_county = county_name
 
-        county_results = (f"{county_name}: {county_vote_percentage:.1f}% ({county_vote_count:,})\n")
+        county_results = (f"{county_name}: {county_vote_percentage:.1f}% ({county:,})\n")
         print (county_results)
         #adding the txt_file portion for txt display
         txt_file.write(county_results)
