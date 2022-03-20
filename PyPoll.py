@@ -19,8 +19,6 @@
 # # Print the present time.
 # print("The time right now is ", now)
 
-#from pathlib import Path
-
 # Assign a variable for the file to load and the path.
 # file_to_load = 'Resources/election_results.csv'
 
@@ -85,7 +83,6 @@ file_to_save = os.path.join("analysis", "election_analysis.txt")
 total_votes = 0
 
 candidate_options = []
-
 candidate_votes = {}
 
 winning_candidate = ""
@@ -122,7 +119,7 @@ with open(file_to_save, "w") as txt_file:
         f"-------------------------\n")
     print(election_results, end="")
     
-    print(election_results)
+    #print(election_results)
     # Save the final vote count to the text file.
     txt_file.write(election_results)
 
@@ -162,6 +159,9 @@ with open(file_to_save, "w") as txt_file:
             f"Winning Percentage: {winning_percentage:.1f}%\n"
             f"-------------------------\n")
     print(winning_candidate_summary)
-    
+
     txt_file.write(winning_candidate_summary)
   
+  #voter turnout for each county
+  #percentage of votes from each county out of the total 
+  # the county with the highest turnout
